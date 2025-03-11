@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=15 format=3 uid="uid://dqt6eyc0l8kms"]
+[gd_resource type="Theme" load_steps=16 format=3 uid="uid://dqt6eyc0l8kms"]
 
 [ext_resource type="Texture2D" uid="uid://d24wavdwab2qx" path="res://Image/Explosion.png" id="1_1u1g3"]
 [ext_resource type="FontFile" uid="uid://2q38bblqh3yd" path="res://Font/Border_Basic.ttf" id="1_32alm"]
 [ext_resource type="FontFile" uid="uid://d3xp4agbq2lok" path="res://Font/m3x6.ttf" id="2_6rcqi"]
+[ext_resource type="FontFile" uid="uid://1o0alne4t80t" path="res://Font/Outward_Bound.ttf" id="3_mgdip"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_peelc"]
 content_margin_bottom = 3.0
@@ -91,6 +92,8 @@ HSlider/styles/slider = SubResource("StyleBoxFlat_hxfml")
 HeaderLarge/constants/line_spacing = -14
 HeaderLarge/font_sizes/font_size = 16
 HeaderLarge/fonts/font = ExtResource("1_32alm")
+HeaderMedium/font_sizes/font_size = 7
+HeaderMedium/fonts/font = ExtResource("3_mgdip")
 Label/colors/font_color = Color(0.996078, 0.615686, 0.0862745, 1)
 TabContainer/styles/panel = SubResource("StyleBoxEmpty_poevj")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_5ip3m")

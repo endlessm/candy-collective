@@ -25,7 +25,7 @@ Licensed under The Unlicense; see [LICENSE](LICENSE) for more information.
 
 Original game by [Harmony Honey].
 
-[Border Basic](https://v3x3d.itch.io/border-basic) font by VEXED, used under Creative Commons Attribution v4.0 International license.
+[Border Basic](https://v3x3d.itch.io/border-basic) and [Outward Bound](https://v3x3d.itch.io/outward-bound) font by VEXED, used under Creative Commons Attribution v4.0 International license.
 
 [m3x6](https://managore.itch.io/m3x6) font by Daniel Linssen.
 
