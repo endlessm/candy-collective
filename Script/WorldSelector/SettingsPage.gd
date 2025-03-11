@@ -4,6 +4,7 @@ signal back
 
 @onready var music_slider : HSlider = %MusicSlider
 @onready var sfx_slider : HSlider = %SfxSlider
+@onready var back_button: Button = %BackButton
 
 func _ready() -> void:
 	_initialise_slider(music_slider, "Music")
@@ -20,8 +21,8 @@ func _on_slider_value_changed(value: float, bus: String) -> void:
 
 
 func _on_visibility_changed() -> void:
-	if self.visible and music_slider:
-		music_slider.grab_focus()
+	if self.visible and back_button:
+		back_button.grab_focus()
 
 
 func _input(event: InputEvent) -> void:
