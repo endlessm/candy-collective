@@ -13,36 +13,41 @@ grow_vertical = 2
 theme = ExtResource("1_kkuy1")
 script = ExtResource("2_jpepg")
 
-[node name="Scroll" type="ScrollContainer" parent="."]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-follow_focus = true
-horizontal_scroll_mode = 0
-vertical_scroll_mode = 2
-metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Scroll"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MarginContainer2" type="MarginContainer" parent="Scroll/VBoxContainer"]
-layout_mode = 2
+theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_right = 5
 
-[node name="Title" type="Label" parent="Scroll/VBoxContainer/MarginContainer2"]
+[node name="Title" type="Label" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_type_variation = &"HeaderMedium"
 text = "Community Worlds"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Scroll/VBoxContainer"]
+[node name="Scroll" type="ScrollContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Scroll/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -50,15 +55,23 @@ theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 5
 
-[node name="ExtraWorldsBox" type="VBoxContainer" parent="Scroll/VBoxContainer/MarginContainer"]
+[node name="ExtraWorldsBox" type="VBoxContainer" parent="VBoxContainer/Scroll/VBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="BackButton" type="Button" parent="Scroll/VBoxContainer/MarginContainer/ExtraWorldsBox"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="BackButton" type="Button" parent="VBoxContainer/MarginContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
+focus_next = NodePath("../../Scroll/VBoxContainer/MarginContainer/ExtraWorldsBox")
+focus_previous = NodePath("../../Scroll/VBoxContainer/MarginContainer/ExtraWorldsBox")
 text = "Go Back"
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="pressed" from="Scroll/VBoxContainer/MarginContainer/ExtraWorldsBox/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/BackButton" to="." method="_on_back_button_pressed"]
