@@ -71,7 +71,7 @@ unique_name_in_owner = true
 layout_mode = 2
 focus_next = NodePath("../../Scroll/VBoxContainer/MarginContainer/ExtraWorldsBox")
 focus_previous = NodePath("../../Scroll/VBoxContainer/MarginContainer/ExtraWorldsBox")
-text = "Go Back"
+text = "<  Go Back   "
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/BackButton" to="." method="_on_back_button_pressed"]

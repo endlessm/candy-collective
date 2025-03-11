@@ -70,7 +70,7 @@ max_value = 0.0
 [node name="BackButton" type="Button" parent="VBoxContainer/MarginContainer/ExtraWorldsBox"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Go Back"
+text = "<  Go Back   "
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/ExtraWorldsBox/BackButton" to="." method="_on_back_button_pressed"]
