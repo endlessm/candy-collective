@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://h6eyk0hg1y1f"]
+[gd_scene load_steps=9 format=3 uid="uid://h6eyk0hg1y1f"]
 
 [ext_resource type="Theme" uid="uid://dqt6eyc0l8kms" path="res://Theme/WorldSelector.tres" id="1_h1u7b"]
 [ext_resource type="Script" uid="uid://ca8wfdo1nykur" path="res://Script/WorldSelector.gd" id="2_c1jjg"]
+[ext_resource type="PackedScene" uid="uid://ddy88bnd0h5it" path="res://Scene/CandySpawner.tscn" id="3_5bnfj"]
 [ext_resource type="PackedScene" uid="uid://b1qffdabwqnxf" path="res://Scene/WorldSelector/ExtraWorldSelector.tscn" id="3_d8a1w"]
 [ext_resource type="PackedScene" uid="uid://pnnwgl5j385l" path="res://Scene/WorldSelector/MainWorldSelector.tscn" id="3_dc6jw"]
+[ext_resource type="Texture2D" uid="uid://q6tpk5wyvjse" path="res://Worlds/World One/Image/Candy/DesaturatedCandy.png" id="4_5bnfj"]
 [ext_resource type="PackedScene" uid="uid://d2ay7olsehadk" path="res://Scene/WorldSelector/SettingsPage.tscn" id="5_opwul"]
 [ext_resource type="AudioStream" uid="uid://fdeyxf6qyqp2" path="res://Audio/MenuLoop.mp3" id="6_8sixt"]
 
@@ -16,6 +18,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_h1u7b")
 script = ExtResource("2_c1jjg")
+
+[node name="CandySpawner" parent="." instance=ExtResource("3_5bnfj")]
+progress = 0.375
+candy_textures = Array[Texture2D]([ExtResource("4_5bnfj")])
 
 [node name="MainWorldSelector" parent="." instance=ExtResource("3_dc6jw")]
 layout_mode = 1
